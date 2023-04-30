@@ -22,5 +22,6 @@ public:
 
     //Rational simplify() const;
 };
+Rational simplify(Rational r);
 
 #endif /* RATIONAL_HPP_ */

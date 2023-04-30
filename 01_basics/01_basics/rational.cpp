@@ -69,3 +69,23 @@ bool Rational::operator<(const Rational& rhs) const {
     return result;
 }*/
 
+Rational simplify(Rational r)
+{
+    if (r.counter == 0) {
+        std::cout << "check point" << std::endl;
+        return r;
+    }
+    int a = (r.denominator > r.counter) ? r.denominator : r.counter;
+    int b = (r.denominator > r.counter) ? r.counter : r.denominator;
+    int temp;
+    while (temp = a % b) {
+
+        a = b;
+        b = temp;
+    }
+
+    r.denominator = r.denominator / b;
+    r.counter = r.counter / b;
+
+    return r;
+}
