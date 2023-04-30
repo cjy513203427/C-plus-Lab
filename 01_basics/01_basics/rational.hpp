@@ -5,8 +5,8 @@
 
 class Rational {
 public:
-    int z;
-    int n;
+    int counter;
+    int denominator;
 
     Rational();
     Rational(int counter, int denominator);
