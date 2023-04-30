@@ -1,6 +1,26 @@
 #include "rational.hpp"
 #include <iostream>
 
+Rational simplify(int counter, int denominator) {
+    // compute the greatest common divisor using Euclid's algorithm
+    int a = counter, b = denominator, tmp;
+    if (b > a) {  // swap the values if denominator is greater than counter
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+    while (b != 0) {
+        tmp = b;
+        b = a % b;
+        a = tmp;
+    }
+    // simplify the fraction
+    Rational rhs(counter, denominator);
+    rhs.counter /= a;
+    rhs.denominator /= a;
+    return rhs;
+}
+
 int main() {
     Rational a(1, 4);
     Rational b(1, 2);
@@ -28,10 +48,10 @@ int main() {
         std::cout << "f is the smallest" << std::endl;
     }
 
-    std::cout << "simplified c: " << c.simplify() << std::endl;
-    std::cout << "simplified d: " << d.simplify() << std::endl;
-    std::cout << "simplified e: " << e.simplify() << std::endl;
-    std::cout << "simplified f: " << f.simplify() << std::endl;
+    std::cout << "simplified c: " << simplify(c.counter,c.denominator) << std::endl;
+    std::cout << "simplified d: " << simplify(d.counter,d.denominator) << std::endl;
+    std::cout << "simplified e: " << simplify(e.counter,e.denominator) << std::endl;
+    std::cout << "simplified f: " << simplify(f.counter,f.denominator) << std::endl;
 
     return 0;
 }

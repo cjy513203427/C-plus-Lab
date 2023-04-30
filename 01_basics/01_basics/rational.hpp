@@ -20,7 +20,7 @@ public:
     Rational operator/(const Rational& rhs) const;
     bool operator<(const Rational& rhs) const;
 
-    Rational simplify() const;
+    //Rational simplify() const;
 };
 
 #endif /* RATIONAL_HPP_ */

@@ -54,7 +54,7 @@ bool Rational::operator<(const Rational& rhs) const {
     return counter * rhs.denominator < rhs.counter * denominator;
 }
 
-Rational Rational::simplify() const {
+/*Rational Rational::simplify() const {
     Rational result = *this;
     // compute the greatest common divisor using Euclid's algorithm
     int a = result.counter, b = result.denominator, tmp;
@@ -67,5 +67,5 @@ Rational Rational::simplify() const {
     result.counter /= a;
     result.denominator /= a;
     return result;
-}
+}*/
 
