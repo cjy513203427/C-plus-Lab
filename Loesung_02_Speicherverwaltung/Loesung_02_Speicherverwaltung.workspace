@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Loesung_02_Speicherverwaltung" Database="" Version="10000">
+  <Project Name="Loesung_02_Speicherverwaltung" Path="Loesung_02_Speicherverwaltung/Loesung_02_Speicherverwaltung.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Loesung_02_Speicherverwaltung" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Loesung_02_Speicherverwaltung" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
