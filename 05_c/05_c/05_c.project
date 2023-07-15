@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="Loesung_02_Speicherverwaltung" Version="11000" InternalType="Console">
+<CodeLite_Project Name="05_c" Version="11000" InternalType="Console">
   <Description/>
   <Dependencies/>
   <Settings Type="Executable">
@@ -93,6 +93,10 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
+    <File Name="strings.h"/>
+    <File Name="strings.c"/>
+    <File Name="registers.h"/>
+    <File Name="registers.c"/>
+    <File Name="main.c"/>
   </VirtualDirectory>
 </CodeLite_Project>
