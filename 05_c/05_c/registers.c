@@ -10,8 +10,8 @@ Register_t ADCCON3 = 0xa14c99f7;
 #define ADC_VREFSEL (0b111 << 13)
 
 void setRegisters(Register_t* reg) {
-    *reg |= (ADC_DIGEN7 | ADC_DIGEN6); // Enable ADC digital channels 6 and 7
     *reg &= ~ADC_DIGEN0TO5; // Disable ADC digital channels 0 to 5
+    *reg |= (ADC_DIGEN7 | ADC_DIGEN6); // Enable ADC digital channels 6 and 7
 
     *reg &= ~ADC_CONCLKDIV; // Clear ADC clock divider bits
     *reg |= (60 << 24); // Set ADC clock divider to 60 (Tq = 60 * Tclk)
@@ -36,9 +36,9 @@ struct ADCCON3Reg {
 
 void setRegistersStruct(Register_t* reg) {
     struct ADCCON3Reg* adcReg = (struct ADCCON3Reg*)reg;
-    adcReg->DIGEN7 = 1; // Enable ADC digital channel 7
-    adcReg->DIGEN6 = 1; // Enable ADC digital channel 6
-    adcReg->DIGEN0TO5 = 0; // Disable ADC digital channels 0 to 5
+    adcReg->DIGIN7 = 1; // Enable ADC digital channel 7
+    adcReg->DIGIN6 = 1; // Enable ADC digital channel 6
+    adcReg->DIGIN0TO5 = 0; // Disable ADC digital channels 0 to 5
 
     adcReg->CONCLKDIV = 60; // Set ADC clock divider to 60 (Tq = 60 * Tclk)
 
