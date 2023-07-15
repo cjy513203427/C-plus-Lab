@@ -36,13 +36,10 @@ struct ADCCON3Reg {
 
 void setRegistersStruct(Register_t* reg) {
     struct ADCCON3Reg* adcReg = (struct ADCCON3Reg*)reg;
-    adcReg->DIGIN7 = 1; // Enable ADC digital channel 7
-    adcReg->DIGIN6 = 1; // Enable ADC digital channel 6
-    adcReg->DIGIN0TO5 = 0; // Disable ADC digital channels 0 to 5
-
-    adcReg->CONCLKDIV = 60; // Set ADC clock divider to 60 (Tq = 60 * Tclk)
-
-    adcReg->VREFSEL = 0b01; // Set ADC voltage reference to Internal VREFH
+    adcReg->DIGEN7 = 1; // Enable ADC digital channel 7
+    adcReg->DIGEN6 = 1; // Enable ADC digital channel 6
+    adcReg->DIGEN0TO5 = 0; // Disable ADC digital channels 0 to 5
 
     printf("Modified register using structs: 0x%08X\n", *reg);
 }
+
